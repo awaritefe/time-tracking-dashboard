@@ -90,7 +90,7 @@ const populateDOM = (data) => {
     });
 };
 
-fetch("/data.json")
+fetch("../../../data.json")
     .then((response) => {
         if (!response.ok) return console.log("Oops! Something went wrong.");
 
