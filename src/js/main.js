@@ -1,9 +1,9 @@
 import { initialiseData } from "./modules/data.js";
 
-function initializeApp() {
+async function initializeApp() {
     try {
         // Initialise each module
-        initialiseData();
+        await initialiseData();
     } catch (error) {
         console.error("Error initializing application:", error);
     }
