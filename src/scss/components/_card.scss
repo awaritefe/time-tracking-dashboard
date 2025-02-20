@@ -1,6 +1,7 @@
 .cards-container {
     display: grid;
     gap: 1.5rem;
+    cursor: pointer;
     @include break(lg) {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -121,6 +122,7 @@
             display: none;
 
             &.active {
+                display: block;
                 @include break(lg) {
                     display: grid;
                     gap: 0.5rem;

@@ -56,6 +56,12 @@ body {
     text-rendering: optimizeSpeed;
     font-family: $family;
     margin: 0;
+
+    @include break(lg) {
+        display: grid;
+        height: 100vh;
+        align-content: center;
+    }
 }
 
 main {
