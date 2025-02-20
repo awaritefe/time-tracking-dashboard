@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Manrope:wght@200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: hsl(226, 43%, 10%);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+}
+
+main {
+  margin: 0 1rem;
+  display: grid;
+  gap: 1rem;
+  justify-content: center;
+}
+@media screen and (min-width: 769px) {
+  main {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.cards-container {
+  display: grid;
+  gap: 1.5rem;
+}
+@media screen and (min-width: 769px) {
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1025px) {
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.cards-container .card {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 0.938rem;
+  display: grid;
+  gap: 0.5rem;
+  padding: 2rem;
+  position: relative;
+  margin-top: 2rem;
+  max-height: 7.5rem;
+  max-width: 20rem;
+}
+.cards-container .card:hover {
+  background-color: hsl(235, 45%, 61%);
+}
+@media screen and (min-width: 769px) {
+  .cards-container .card {
+    max-width: 16rem;
+    padding: 1rem;
+    min-width: 8rem;
+  }
+}
+.cards-container .card.Work:before {
+  background: hsl(15, 100%, 70%);
+  background-image: url("../../../assets/images/icon-work.svg");
+  background-size: 4rem;
+  background-repeat: no-repeat;
+  background-position: top -0.5rem right 1rem;
+}
+.cards-container .card.Play:before {
+  background: hsl(195, 74%, 62%);
+  background-image: url("../../../assets/images/icon-play.svg");
+  background-size: 4rem;
+  background-repeat: no-repeat;
+  background-position: top -0.2rem right 1rem;
+}
+.cards-container .card.Study:before {
+  background: hsl(348, 100%, 68%);
+  background-image: url("../../../assets/images/icon-study.svg");
+  background-size: 4rem;
+  background-repeat: no-repeat;
+  background-position: top -0.2rem right 1rem;
+}
+.cards-container .card.Exercise:before {
+  background: hsl(145, 58%, 55%);
+  background-image: url("../../../assets/images/icon-exercise.svg");
+  background-size: 4rem;
+  background-repeat: no-repeat;
+  background-position: top 0rem right 1rem;
+}
+.cards-container .card.Social:before {
+  background: hsl(264, 64%, 52%);
+  background-image: url("../../../assets/images/icon-social.svg");
+  background-size: 4rem;
+  background-repeat: no-repeat;
+  background-position: top -1rem right 1rem;
+}
+.cards-container .card.Care:before {
+  background: hsl(43, 84%, 65%);
+  background-image: url("../../../assets/images/icon-self-care.svg");
+  background-size: 3rem;
+  background-repeat: no-repeat;
+  background-position: top -0.2rem right 1rem;
+}
+.cards-container .card:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: -2rem;
+  border-radius: 15px;
+}
+.cards-container .card-title, .cards-container .card-details {
+  align-items: center;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.cards-container .card-title span, .cards-container .card-details span {
+  font-size: 2rem;
+  font-weight: 300;
+}
+.cards-container .card-title h2, .cards-container .card-details h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+.cards-container .card-title p, .cards-container .card-details p {
+  font-size: 0.85rem;
+  color: hsl(236, 100%, 87%);
+  margin: 0;
+}
+.cards-container .card-details {
+  display: none;
+}
+@media screen and (min-width: 769px) {
+  .cards-container .card-details.active {
+    display: grid;
+    gap: 0.5rem;
+  }
+}
+
+.card.sidebar {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 15px;
+  margin: 0;
+  gap: 0;
+  padding: 0;
+  max-height: -moz-min-content;
+  max-height: min-content;
+  max-width: 24rem;
+}
+.card.sidebar::before {
+  content: none;
+}
+@media screen and (min-width: 769px) {
+  .card.sidebar {
+    max-height: 100%;
+    max-width: 12rem;
+    width: 100%;
+  }
+}
+.card.sidebar img {
+  border: 3px solid white;
+  border-radius: 100vmax;
+  width: 4rem;
+  height: 4rem;
+}
+.card.sidebar .card-header-outer {
+  align-items: center;
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 15px;
+  display: flex;
+  gap: 1rem;
+  padding: 2rem;
+}
+@media screen and (min-width: 769px) {
+  .card.sidebar .card-header-outer {
+    display: block;
+    padding: 1rem;
+  }
+}
+.card.sidebar .card-header-title {
+  color: hsl(236, 100%, 87%);
+  font-size: 15px;
+}
+.card.sidebar .card-header-name {
+  color: white;
+  font-size: 1.333333rem;
+  font-weight: 300;
+}
+@media screen and (min-width: 769px) {
+  .card.sidebar .card-header-name {
+    font-size: 1.66666rem;
+  }
+}
+.card.sidebar .card-header-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+}
+@media screen and (min-width: 769px) {
+  .card.sidebar .card-header-buttons {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+}
+.card.sidebar .card-header-buttons button {
+  background-color: transparent;
+  border: none;
+  color: hsl(236, 100%, 87%);
+  font-size: 18px;
+}
+@media screen and (min-width: 769px) {
+  .card.sidebar .card-header-buttons button {
+    text-align: left;
+  }
+}
+.card.sidebar .card-header-buttons button:hover {
+  color: white;
+}/*# sourceMappingURL=main.css.map */

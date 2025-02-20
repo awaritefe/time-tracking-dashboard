@@ -1,0 +1,206 @@
+.cards-container {
+    display: grid;
+    gap: 1.5rem;
+    @include break(lg) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include break(desktop) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .card {
+        background-color: $dark-blue;
+        border-radius: 0.938rem;
+        display: grid;
+        gap: 0.5rem;
+        padding: 2rem;
+        position: relative;
+        margin-top: 2rem;
+        max-height: 7.5rem;
+        max-width: 20rem;
+
+        &:hover {
+            background-color: $desaturated-blue;
+        }
+
+        @include break(lg) {
+            max-width: 16rem;
+            padding: 1rem;
+            min-width: 8rem;
+        }
+
+        &.Work {
+            &:before {
+                background: $orange;
+                background-image: url("../../../assets/images/icon-work.svg");
+                background-size: 4rem;
+                background-repeat: no-repeat;
+                background-position: top -0.5rem right 1rem;
+            }
+        }
+        &.Play {
+            &:before {
+                background: $light-blue;
+                background-image: url("../../../assets/images/icon-play.svg");
+                background-size: 4rem;
+                background-repeat: no-repeat;
+                background-position: top -0.2rem right 1rem;
+            }
+        }
+        &.Study {
+            &:before {
+                background: $red;
+                background-image: url("../../../assets/images/icon-study.svg");
+                background-size: 4rem;
+                background-repeat: no-repeat;
+                background-position: top -0.2rem right 1rem;
+            }
+        }
+        &.Exercise {
+            &:before {
+                background: $green;
+                background-image: url("../../../assets/images/icon-exercise.svg");
+                background-size: 4rem;
+                background-repeat: no-repeat;
+                background-position: top 0rem right 1rem;
+            }
+        }
+        &.Social {
+            &:before {
+                background: $violet;
+                background-image: url("../../../assets/images/icon-social.svg");
+                background-size: 4rem;
+                background-repeat: no-repeat;
+                background-position: top -1rem right 1rem;
+            }
+        }
+        &.Care {
+            &:before {
+                background: $yellow;
+                background-image: url("../../../assets/images/icon-self-care.svg");
+                background-size: 3rem;
+                background-repeat: no-repeat;
+                background-position: top -0.2rem right 1rem;
+            }
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: -2rem;
+            border-radius: $br15;
+        }
+
+        &-title,
+        &-details {
+            align-items: center;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+
+            span {
+                font-size: 2rem;
+                font-weight: $light;
+            }
+
+            h2 {
+                font-size: $font-size;
+                font-weight: $bold;
+                margin: 0;
+            }
+
+            p {
+                font-size: 0.85rem;
+                color: $pale-blue;
+                margin: 0;
+            }
+        }
+        &-details {
+            display: none;
+
+            &.active {
+                @include break(lg) {
+                    display: grid;
+                    gap: 0.5rem;
+                }
+            }
+        }
+    }
+}
+.card {
+    &.sidebar {
+        background-color: $dark-blue;
+        border-radius: $br15;
+        margin: 0;
+        gap: 0;
+        padding: 0;
+        max-height: min-content;
+        max-width: 24rem;
+        &::before {
+            content: none;
+        }
+        @include break(lg) {
+            max-height: 100%;
+            max-width: 12rem;
+            width: 100%;
+        }
+        img {
+            border: 3px solid white;
+            border-radius: 100vmax;
+            width: 4rem;
+            height: 4rem;
+        }
+        .card-header {
+            &-outer {
+                align-items: center;
+                background-color: $blue;
+                border-radius: $br15;
+                display: flex;
+                gap: 1rem;
+                padding: 2rem;
+                @include break(lg) {
+                    display: block;
+                    padding: 1rem;
+                }
+            }
+            &-title {
+                color: $pale-blue;
+                font-size: 15px;
+            }
+            &-name {
+                color: white;
+                font-size: 1.333333rem;
+                font-weight: $light;
+                @include break(lg) {
+                    font-size: 1.66666rem;
+                }
+            }
+            &-buttons {
+                display: flex;
+                justify-content: space-between;
+                padding: 1.5rem 2rem;
+                @include break(lg) {
+                    display: grid;
+                    gap: 1.5rem;
+                    padding: 1rem;
+                }
+                button {
+                    background-color: transparent;
+                    border: none;
+                    color: $pale-blue;
+                    font-size: $font-size;
+
+                    @include break(lg) {
+                        text-align: left;
+                    }
+
+                    &:hover {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

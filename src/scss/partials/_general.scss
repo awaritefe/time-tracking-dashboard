@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Manrope:wght@200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+//COLOURS
+//Primary
+$blue: hsl(246, 80%, 60%);
+
+//Work
+$orange: hsl(15, 100%, 70%);
+//Play
+$light-blue: hsl(195, 74%, 62%);
+//Study
+$red: hsl(348, 100%, 68%);
+//Exercise
+$green: hsl(145, 58%, 55%);
+//Social
+$violet: hsl(264, 64%, 52%);
+//Self care
+$yellow: hsl(43, 84%, 65%);
+
+//Neutral
+$darkest-blue: hsl(226, 43%, 10%);
+$dark-blue: hsl(235, 46%, 20%);
+$desaturated-blue: hsl(235, 45%, 61%);
+$pale-blue: hsl(236, 100%, 87%);
+
+//TYPOGRAPGHY
+
+//Body Copy
+
+$font-size: 18px;
+
+//Font
+
+$family: "Rubik", sans-serif;
+$light: 300;
+$medium: 400;
+$bold: 500;
+
+// $border radius
+$br15: 15px;
+
+//Breakpoint
+$breakpoints: (
+    lg: 769px,
+    desktop: 1025px,
+);
+
+html {
+    font-size: $font-size;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $darkest-blue;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeSpeed;
+    font-family: $family;
+    margin: 0;
+}
+
+main {
+    margin: 0 1rem;
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+
+    @include break(lg) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}
