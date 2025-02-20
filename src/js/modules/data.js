@@ -6,7 +6,7 @@ const appendItem = (item) => {
     card.innerHTML = `
         <div class="card-title">
             <h2>${item.title}</h2>
-            <img src="../../../assets/images/icon-ellipsis.svg" alt="Icon ellipsis">
+            <img src="assets/images/icon-ellipsis.svg" alt="Icon ellipsis">
         </div>
         <div class="card-details daily active">
             <span>${item.timeframes.daily.current}hrs</span>
